@@ -1,4 +1,6 @@
 window.onload = function () {
+  let wrapper = document.getElementById("wrapper");
+  wrapper.className = "visible";
   let bar = document.querySelector(".bar");
   let info_name = document.querySelector(".info em");
   let info_schedule = document.querySelector(".schedule");

@@ -92,7 +92,6 @@ textarea {
   font-family: "MapoFlowerIsland", sans-serif;
   font-weight: 400;
   color: #333;
-  -webkit-font-smoothing: antialiased;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -113,8 +112,14 @@ body {
   overflow-x: hidden;
 }
 body {
-  max-width: 500px;
   line-height: 1;
+}
+body,
+html,
+p,
+strong,
+span {
+  user-select: none;
 }
 ol,
 ul,

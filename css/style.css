@@ -1,26 +1,112 @@
 body {
-  /* height: 1800vh; */
+  height: 1800vh;
   position: relative;
+  background: url(../images/bg_main.png) no-repeat;
+  background-size: 100% 200vh;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 1s 0.5s ease-out;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: rgba(250, 250, 250, 0.5); */
+}
+
+.content {
+  width: 100%;
+  max-width: 430px;
+  box-shadow: 0px 0px 14px rgb(24 24 24 / 10%);
+}
+
+section {
+  width: 100%;
 }
 /* intro */
 section.intro {
   height: 100vh;
   text-align: center;
   position: relative;
-  background-color: #fcfcfc;
+  /* background-color: #fcfcfc; */
 }
-section.intro:after {
-  content: "";
+
+section.intro .box_path {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  background: url(../images/bg_main.png) no-repeat;
-  background-size: cover;
-  background-color: #f6f6f6;
-  z-index: -1;
-  opacity: 0.5;
+}
+section.intro .box_path svg {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+section.intro .box_path .left_top {
+  left: clamp(16px, 5.5vw, 20px);
+  top: 16px;
+}
+
+section.intro .box_path .right_top {
+  right: clamp(16px, 5.5vw, 20px);
+  top: 16px;
+  transform: rotate(90deg);
+}
+section.intro .box_path .left_bottom {
+  left: clamp(16px, 5.5vw, 20px);
+  bottom: 16px;
+  transform: rotate(270deg);
+}
+section.intro .box_path .right_bottom {
+  right: clamp(16px, 5.5vw, 20px);
+  bottom: 16px;
+  transform: rotate(180deg);
+}
+
+section.intro .box_path .line_top {
+  position: absolute;
+  top: 16px;
+  left: clamp(116px, calc(5.5vw + 100px), 120px);
+  right: clamp(116px, calc(5.5vw + 100px), 120px);
+  height: 1px;
+  background-color: #e2e2e4;
+}
+
+section.intro .box_path .line_left {
+  position: absolute;
+  top: 116px;
+  bottom: 116px;
+  width: 1px;
+  left: clamp(16px, 5.5vw, 20px);
+  background-color: #e2e2e4;
+}
+
+section.intro .box_path .line_right {
+  position: absolute;
+  top: 116px;
+  bottom: 116px;
+  width: 1px;
+  right: clamp(16px, 5.5vw, 20px);
+  background-color: #e2e2e4;
+}
+
+section.intro .box_path .line_bottom {
+  position: absolute;
+  bottom: 16px;
+  left: clamp(116px, calc(5.5vw + 100px), 120px);
+  right: clamp(116px, calc(5.5vw + 100px), 120px);
+  height: 1px;
+  background-color: #e2e2e4;
 }
 
 section.intro .container {
@@ -42,7 +128,7 @@ section.intro .box_animation .bar {
   opacity: 0;
   height: 0;
   background-color: #aaa;
-  transition: height 0.7s cubic-bezier(0.09, 0.24, 0.37, 0.94);
+  transition: height 0.5s 1s cubic-bezier(0.09, 0.24, 0.37, 0.94);
   will-change: height;
 }
 
@@ -52,7 +138,7 @@ section.intro .info em {
   line-height: 1.4;
   opacity: 0;
   will-change: opacity;
-  transition: opacity 0.5s 0.7s;
+  transition: opacity 0.5s 1.3s;
 }
 
 section.intro .info em small {
@@ -62,7 +148,7 @@ section.intro .info em small {
 section.intro .info .schedule {
   opacity: 0;
   will-change: opacity;
-  transition: opacity 0.5s 0.8s;
+  transition: opacity 1.7s 1.3s;
 }
 
 section.intro .info span {
@@ -72,74 +158,67 @@ section.intro .info span {
 
 /* greeting */
 section.greeting {
-  position: sticky;
-  top: 0;
-  /* height: 100vh; */
+  position: relative;
 }
-/* section.greeting .container {
-  height: 100vh;
-} */
-
-section.greeting .card {
-  position: absolute;
-  left: 0;
-  top: 0;
+section.greeting .container {
   width: 100%;
-  min-width: 100%;
-  height: 100vh;
-  z-index: 1;
-  /* opacity: 0; */
+}
+section.greeting .images {
+  overflow: hidden;
+}
+section.greeting .images img {
+  position: relative;
+  height: auto;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
 }
 
-section.greeting .card p {
+section.greeting .messages {
   position: absolute;
-  left: 0;
-  right: 0;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 1.2rem;
   top: 10vh;
   color: #fff;
   text-align: center;
 }
 
-section.greeting .card.card_01 p {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+section.greeting .messages .main-message p {
+  font-size: 1.4rem;
+  color: #fff;
 }
 
-section.greeting .card img {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  height: 100%;
-  width: auto;
-  object-fit: cover;
-}
-
+/* ******* */
+/* contact */
+/* ******* */
 section.contact {
-  padding: calc(100vh + 48px) 16px 0;
-  background-color: #f7f7f7;
+  padding: 128px 16px 64px;
+  background-color: #fff;
 }
 
-section.contact span {
-  font-size: 16px;
+section.contact .wrap_contact {
+  margin: 0 auto 54px;
+  padding: 0 20px;
 }
 
-section.contact .main {
-  margin-bottom: 54px;
-}
-section.contact .main .couple {
+section.contact .row {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  column-gap: 20px;
+  border-top: 1px solid #eee;
+  padding: 12px 0;
 }
 
-section.contact .main .couple + .couple {
-  margin-top: 30px;
+section.contact .row strong {
+  font-size: 1.3rem;
 }
 
+section.contact .bride {
+  margin-top: 48px;
+}
 section.contact .btns {
   display: flex;
   justify-content: center;
@@ -150,11 +229,11 @@ section.contact .btns a {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #eee;
+  /* border: 1px solid #fafafa; */
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: #f7f7f7;
 }
 
 section.contact .btns a i {
@@ -176,4 +255,117 @@ section.contact .sub .parents strong {
 }
 section.contact .sub .parents span {
   margin-top: 20px;
+}
+
+/* ******** */
+/* calendar */
+/* ******** */
+section.calendar {
+  padding: 64px 12px 64px;
+  background-color: #fcfcfc;
+}
+
+section.calendar .head {
+  text-align: center;
+}
+
+section.calendar .head strong {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 3px;
+}
+
+.calendar_wrapper {
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #f6f6f6;
+}
+
+.calendar_wrapper .summ {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 18px 28px;
+  border-bottom: 1px solid #eee;
+}
+.calendar_wrapper .summ em {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.calendar_wrapper .summ em + em {
+  font-size: 1.1rem;
+}
+
+.calendar {
+  height: 100%;
+  width: 100%;
+}
+
+.table_calendar .calendar_body {
+  padding: 16px;
+}
+
+.table_calendar .head {
+  font-size: 13px;
+  color: #ff7373;
+}
+.table_calendar .calendar_body .row {
+  display: flex;
+}
+.table_calendar .head,
+.table_calendar .day {
+  width: 14.28%;
+  height: 36px;
+  font-weight: 300;
+  line-height: 36px;
+  text-align: center;
+  word-break: break-all;
+}
+
+.table_calendar .day > span {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 36px;
+}
+.table_calendar .dday {
+  position: relative;
+}
+.table_calendar .dday > span {
+  position: relative;
+  z-index: 10;
+  border-radius: 50%;
+  line-height: 36px;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (min-height: 800px) {
+  section.intro .container {
+    padding-top: 20vh;
+  }
+}
+
+@media (max-width: 340px) {
+  section.contact .wrap_contact {
+    max-width: 280px;
+    padding: 0 10px;
+  }
+  section.calendar .head strong {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  section.contact .row strong {
+    font-size: 1.1rem;
+  }
+
+  .calendar_wrapper .summ {
+    padding: 18px;
+  }
+
+  section.greeting .messages .main-message p {
+    font-size: 1.2rem;
+  }
 }
