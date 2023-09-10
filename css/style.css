@@ -1,0 +1,173 @@
+body {
+  height: 1800vh;
+  position: relative;
+}
+/* intro */
+section.intro {
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  background-color: #fcfcfc;
+}
+section.intro:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../images/bg_main.png) no-repeat;
+  background-size: cover;
+  background-color: #f6f6f6;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+section.intro .container {
+  padding-top: 10vh;
+}
+
+section.intro .box_animation {
+  position: relative;
+}
+
+section.intro .box_animation strong {
+  font-size: 3.5rem;
+  line-height: 1.6;
+}
+
+section.intro .box_animation .bar {
+  margin: 0.8rem auto 1.6rem;
+  width: 1px;
+  opacity: 0;
+  height: 0;
+  background-color: #aaa;
+  transition: height 0.7s cubic-bezier(0.09, 0.24, 0.37, 0.94);
+  will-change: height;
+}
+
+section.intro .info em {
+  margin-bottom: 8vh;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.5s 0.7s;
+}
+
+section.intro .info em small {
+  font-size: 1.4rem;
+}
+
+section.intro .info .schedule {
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.5s 0.8s;
+}
+
+section.intro .info span {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* greeting */
+section.greeting {
+  position: sticky;
+  top: 0;
+  /* height: 100vh; */
+}
+/* section.greeting .container {
+  height: 100vh;
+} */
+
+section.greeting .card {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-width: 100%;
+  height: 100vh;
+  z-index: 1;
+  /* opacity: 0; */
+}
+
+section.greeting .card p {
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 1.2rem;
+  top: 10vh;
+  color: #fff;
+  text-align: center;
+}
+
+section.greeting .card.card_01 p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+section.greeting .card img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+section.contact {
+  height: 100vh;
+  padding: 400vh 16px 0;
+  background-color: #f7f7f7;
+}
+
+section.contact span {
+  font-size: 16px;
+}
+
+section.contact .main {
+  margin-bottom: 54px;
+}
+section.contact .main .couple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+section.contact .main .couple + .couple {
+  margin-top: 30px;
+}
+
+section.contact .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 14px;
+}
+section.contact .btns a {
+  border: 1px solid #eee;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+section.contact .sub {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  column-gap: 44px;
+}
+
+section.contact .sub .btns {
+  margin-top: 8px;
+}
+section.contact .sub .parents strong {
+  font-size: 16px;
+}
+section.contact .sub .parents span {
+  margin-top: 20px;
+}
