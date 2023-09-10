@@ -110,7 +110,7 @@ section.intro .box_path .line_bottom {
 }
 
 section.intro .container {
-  padding-top: 10vh;
+  padding-top: 15vh;
 }
 
 section.intro .box_animation {
@@ -341,7 +341,7 @@ section.calendar .head strong {
   font-weight: bold;
 }
 
-@media (min-height: 800px) {
+@media (min-height: 667px) {
   section.intro .container {
     padding-top: 20vh;
   }
