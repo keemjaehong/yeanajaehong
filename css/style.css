@@ -1,5 +1,4 @@
 body {
-  height: 1800vh;
   position: relative;
   background: url(../images/bg_main.png) no-repeat;
   background-size: 100% 200vh;
@@ -110,7 +109,7 @@ section.intro .box_path .line_bottom {
 }
 
 section.intro .container {
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 
 section.intro .box_animation {
@@ -195,13 +194,19 @@ section.greeting .messages .main-message p {
 /* contact */
 /* ******* */
 section.contact {
-  padding: 128px 16px 64px;
+  padding: 64px 16px 64px;
   background-color: #fff;
 }
 
 section.contact .wrap_contact {
   margin: 0 auto 54px;
   padding: 0 20px;
+}
+
+section.contact .wrap_contact .title {
+  margin-bottom: 32px;
+  font-size: 1.35rem;
+  text-align: center;
 }
 
 section.contact .row {
@@ -213,7 +218,7 @@ section.contact .row {
 }
 
 section.contact .row strong {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 section.contact .bride {
@@ -261,8 +266,8 @@ section.contact .sub .parents span {
 /* calendar */
 /* ******** */
 section.calendar {
-  padding: 64px 12px 64px;
-  background-color: #fcfcfc;
+  padding: 64px 16px 64px;
+  background-color: #fefbfb;
 }
 
 section.calendar .head {
@@ -280,7 +285,7 @@ section.calendar .head strong {
 .calendar_wrapper {
   border-radius: 6px;
   background-color: #fff;
-  border: 1px solid #f6f6f6;
+  border: 1px solid #fff5f5;
 }
 
 .calendar_wrapper .summ {
@@ -341,15 +346,112 @@ section.calendar .head strong {
   font-weight: bold;
 }
 
-@media screen and (min-height: 768px) {
-  section.intro .container {
-    padding-top: 20vh;
-  }
+/* ******** */
+/* location */
+/* ******** */
+
+section.location {
+  padding: 64px 16px;
+  text-align: center;
+}
+section.location .title {
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+section.location address {
+  margin-bottom: 24px;
+}
+
+section.location .description {
+  text-align: left;
+  margin-top: 32px;
+}
+section.location .description p {
+  display: flex;
+}
+
+section.location .description p.column {
+  flex-direction: column;
+}
+
+section.location .description p + p {
+  margin-top: 2px;
+}
+section.location .description p strong {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+section.location .description p span {
+  font-size: 1.1rem;
+}
+
+section.location .description p small {
+  padding-top: 4px;
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+section.location .description p small i {
+  line-height: 1.4;
+  font-size: 0.9rem;
+}
+
+section.location .description p small b {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+section.location .description p small u {
+  display: block;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding-left: 8px;
+}
+
+section.location .description p em {
+  min-width: 120px;
+  line-height: 1.8;
+}
+
+section.heart {
+  padding: 48px 16px 64px;
+  background-color: #fff3f3;
+}
+
+section.heart strong {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.banner_bouquet {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.banner_bouquet img {
+  width: 24px;
+  height: auto;
+  margin: 16px auto;
 }
 
 @media screen and (min-height: 667px) {
   section.intro .container {
     padding-top: 15vh;
+  }
+}
+
+@media screen and (min-height: 768px) {
+  section.intro .container {
+    padding-top: 17vh;
+  }
+}
+
+@media screen and (min-height: 820px) {
+  section.intro .container {
+    padding-top: 19vh;
   }
 }
 
