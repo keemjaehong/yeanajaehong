@@ -341,13 +341,19 @@ section.calendar .head strong {
   font-weight: bold;
 }
 
-@media (min-height: 667px) {
+@media screen and (min-height: 768px) {
   section.intro .container {
     padding-top: 20vh;
   }
 }
 
-@media (max-width: 340px) {
+@media screen and (min-height: 667px) {
+  section.intro .container {
+    padding-top: 15vh;
+  }
+}
+
+@media screen and (max-width: 340px) {
   section.contact .wrap_contact {
     max-width: 280px;
     padding: 0 10px;
